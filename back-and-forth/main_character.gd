@@ -5,6 +5,7 @@ extends Node2D
 
 var curr_direction: Vector2 = Vector2.RIGHT
 @onready var curr_position: Vector2 = $Character.position
+@export var character: Node2D
 var balls = 3
 
 func _process(delta: float) -> void:
