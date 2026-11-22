@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cid1ikqymtdoo"]
+
+[ext_resource type="Texture2D" uid="uid://df6menr4hh00a" path="res://Untitled Design (2)-transparent.png" id="1_qrebf"]
+
+[sub_resource type="GDScript" id="GDScript_k3kcl"]
+script/source = "
+extends Node2D
+
+@export var speed: float = 120.0
+
+@onready var character: Node2D = get_node(\"../Character\")
+
+func _process(delta: float) -> void:
+	var direction = global_position.direction_to(character.global_position)
+	global_position += direction * speed * delta
+"
+
+[node name="Spider" type="Node2D" unique_id=487454425]
+script = SubResource("GDScript_k3kcl")
+
+[node name="Spider" type="Sprite2D" parent="." unique_id=2083291033]
+position = Vector2(931, 171)
+scale = Vector2(0.10092592, 0.10092592)
+texture = ExtResource("1_qrebf")
+script = SubResource("GDScript_k3kcl")

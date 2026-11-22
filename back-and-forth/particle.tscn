@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://be6lalw6c4cnb"]
+
+[ext_resource type="Script" uid="uid://bqmukatu3cdqe" path="res://particle.gd" id="1_kgu82"]
+[ext_resource type="Texture2D" uid="uid://bhwcafxfr2laa" path="res://image (1).svg" id="2_pxd2d"]
+
+[node name="Particle" type="Node2D" unique_id=321429910]
+script = ExtResource("1_kgu82")
+
+[node name="Particle" type="Sprite2D" parent="." unique_id=1338547769]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_pxd2d")

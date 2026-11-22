@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://df4h26c2t6oh7"]
+
+[ext_resource type="Script" uid="uid://brlf2plu410x2" path="res://main_character.gd" id="1_wmkwl"]
+[ext_resource type="Texture2D" uid="uid://bpco16fqmmqt" path="res://image.svg" id="2_2q423"]
+[ext_resource type="Texture2D" uid="uid://dq5fhhd2f332c" path="res://images.jpeg" id="2_8yqgs"]
+[ext_resource type="PackedScene" uid="uid://vvp334dqtcwg" path="res://Ball.tscn" id="2_uvl38"]
+[ext_resource type="PackedScene" uid="uid://cid1ikqymtdoo" path="res://spider.tscn" id="5_2v62t"]
+[ext_resource type="Texture2D" uid="uid://d1pxhmxs30icq" path="res://red-00.webp" id="5_jw0ju"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3tj6u"]
+blend_mode = 2
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lxte5"]
+blend_mode = 2
+
+[node name="MainCharacter" type="Node2D" unique_id=761520294]
+script = ExtResource("1_wmkwl")
+
+[node name="Energy" type="Sprite2D" parent="." unique_id=541021056]
+z_index = 20
+position = Vector2(180.37498, 80.24999)
+scale = Vector2(0.5, 0.05)
+texture = ExtResource("2_8yqgs")
+
+[node name="Energy Border" type="Sprite2D" parent="." unique_id=1090429625]
+z_index = 19
+material = SubResource("CanvasItemMaterial_3tj6u")
+position = Vector2(179.5, 80.5)
+scale = Vector2(0.5252707, 0.07400721)
+texture = ExtResource("2_8yqgs")
+
+[node name="Character" type="Sprite2D" parent="." unique_id=18988285]
+position = Vector2(559, 345)
+texture = ExtResource("2_2q423")
+
+[node name="Ball" parent="." unique_id=2034955545 instance=ExtResource("2_uvl38")]
+position = Vector2(-144, -221)
+
+[node name="Health Border" type="Sprite2D" parent="." unique_id=450958872]
+z_index = 19
+material = SubResource("CanvasItemMaterial_lxte5")
+position = Vector2(317, 29.499998)
+scale = Vector2(1.1516244, 0.070397116)
+texture = ExtResource("2_8yqgs")
+
+[node name="Spider" parent="." unique_id=487454425 instance=ExtResource("5_2v62t")]
+position = Vector2(316.00003, 28.999998)
+scale = Vector2(0.32526046, 0.02361111)
+
+[node name="Health" type="Sprite2D" parent="." unique_id=47737804]
+z_index = 20
+position = Vector2(316.00003, 28.999998)
+scale = Vector2(0.32526046, 0.02361111)
+texture = ExtResource("5_jw0ju")
